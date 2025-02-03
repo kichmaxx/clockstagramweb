@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Clockstagram Homepage</title>
+    <style>
+        body {
+            background-image: url("blur.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: lighten;
+            text-align: center;
+            margin-top: 5%;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 5%;
+        }
+        .profile {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+        .profile h2, .profile p {
+            color: white;
+        }
+        .marquee {
+            background-color: rgba(255, 255, 0, 0.8);
+            padding: 10px;
+            margin-top: 20px;
+            color: #333;
+        }
+        .clock-image img {
+            border: 2px solid white;
+            border-radius: 10px;
+            width: 300px;
+            height: auto;
+        }
+         
+    </style>
+</head>
+<body>
+    <h1><b><i>Clockstagram account</i></b></h1>
+   
+    <marquee class="marquee" behavior="scroll" direction="left">
+        HAHAHAHHAHA THERE IS NO ESCAPE NOW, SPIRAL INTO THE NUMBERS
+    </marquee>
+
+    <div class="container">
+        <div class="clock-image">
+            <img src="another.jpg" alt="Clock Image">
+        </div>
+        <div class="profile">
+            <h2>My Profile</h2>
+            <p>Username: <strong id="username">user</strong></p>
+            <p>Email: <strong id="email">a@gmail.com</strong></p>
+            <p>Bio: <strong id="bio">write about yourself</strong></p>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Registration Page</title>
+    <style>
+        body {
+            background-image: url("brown");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: lighten;
+            text-align: center;
+            margin-top: 10%;
+            h1{color:#d4bd00;}
+            p{color:#d4bd00;}
+        }
+    </style>
+<script>
+        function register() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm_password").value;
+            let email = document.getElementById("email").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            //store
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+           //alert(localStorage.getItem("username"));
+            //alert(localStorage.getItem("password"));
+            
+
+            window.location.href = "main.html";
+            return false; 
+        }
+
+        function cancel() {
+            window.location.href = "main.html";
+                }
+    </script>
+
+</head>
+<body>
+    <h1><b>Register for Clockstagram</b></h1>
+    <form onsubmit="return register()">
+        <p>Username: <input type="text" name="username" id="username" required></p>
+        <p>Password: <input type="password" name="password" id="password" required></p>
+        <p>Confirm Password: <input type="password" name="confirm_password" id="confirm_password" required></p>
+        <p>Email: <input type="email" name="email" id="email" required></p>
+        <p>
+            <input type="submit" onclick="register()" value="Submit">
+            <input type="button" value="Cancel" onclick="cancel()">
+        </p>
+    </form>
+    
+</body>
+</html>

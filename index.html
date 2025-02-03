@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Social Media Account Login</title>
+    <style>
+        body {
+            background-image: url('color.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: lighten;
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        .box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        h1 {
+            color: #d4bd00;
+        }
+
+        p {
+            color: #d4bd00;
+        }
+
+        .image1 {
+            margin-bottom: 20px;
+        }
+        .marquee {
+            background-color: #f6f2c7;
+            padding: 10px;         }
+           </style>
+<script>
+ function submit(){
+ //alert(localStorage.getItem("username"));
+ //alert(localStorage.getItem("password"));
+let username=document.getElementById("t1").value;
+let password=document.getElementById("t2").value;
+let uname=localStorage.getItem("username");
+let pass=localStorage.getItem("password");
+if(username==uname && password==pass)
+{alert("you are valid");
+window.location.href="welcome.html";
+}
+else{alert("intruder");}
+}
+
+
+function register() {
+            window.location.href = "registration.html";
+        }
+
+</script>
+
+</head>
+<body>  
+    <div class="box">
+        <h1><b>CLOCKSTAGRAM</b></h1><br>
+        <form onsubmit="return checkRegistration()">
+            <p><b>Username: <input type="text"  name="t1" id="t1" required></b></p>
+            <p><b>Password: <input type="password" name="t2" id="t2" required></b></p>
+            <p>
+                
+                
+            </p>
+        </form>
+<input type="submit" value="Login" onclick="submit()" >
+<input type="button" value="Register" onclick="register()">
+    </div>
+     <div class="image1">
+        <img src="ancient.jpg" alt="Image 1" width="200" height="200">
+    </div>
+<marquee class="marquee" direction="right" loop=""><b>BEWARE YOU ARE ENTERING THE WORLD OF ANCIENT CLOCKS<b></marquee>
+    
+</body>
+</html>
